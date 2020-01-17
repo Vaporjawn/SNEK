@@ -6,3 +6,18 @@ const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
 var snake;
+
+(function setup() {
+	snake = new Snake();
+
+	window.setInterval(() => {
+		snake.update();
+		snake.draw();
+
+	}, 250);
+}());
+
+window.addEventListener('keydown', ((evt) => {
+	const direction = evt.key.replace('Arrow', '');
+	snake.changeDirection(direction)
+}))
