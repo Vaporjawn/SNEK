@@ -44,11 +44,11 @@ this.update = function() {
 	}
 }
 
-	
+
 
 
 	this.changeDirection = function(direction) {
-		switch(direction){ 
+		switch(direction){
 			case 'Up' :
 				this.xSpeed = 0;
 				this.ySpeed = -scale * 1;
@@ -77,4 +77,3 @@ this.update = function() {
 		return false;
 	}
 }
-
